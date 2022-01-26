@@ -1,9 +1,9 @@
 import { useState, useEffect, useContext } from "react";
 import { FabricContext } from "../context/FabricContext";
-
+import { BackgroundContext } from "./Properties";
 const SolidBackground = () => {
-  const [backgroundColor, setBackgroundColor] = useState("#4682b4");
   const { canvas } = useContext(FabricContext);
+  const { backgroundColor, setBackgroundColor } = useContext(BackgroundContext);
 
   useEffect(() => {
     if (!canvas) return;
@@ -25,7 +25,6 @@ const SolidBackground = () => {
         className="w-full"
         value={backgroundColor}
         onChange={changeColor}
-        // onChange={(e) => changeColor(e.target.value)}
       />
     </div>
   );

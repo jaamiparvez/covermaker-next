@@ -7,25 +7,6 @@ export const FabricContext = createContext([]);
 export const FabricContextProvider = ({ children }) => {
   const [canvas, setCanvas] = useState(null);
   const [activeObject, setActiveObject] = useState(null);
-  const [backgroundColor, setBackgroundColor] = useState("#4682b4");
-  const [startColor, setStartColor] = useState("#1FF0FF");
-  const [endColor, setEndColor] = useState("#4FC461");
-  const [directionRadio, setDirectionRadio] = useState({
-    left: true,
-    top: false,
-  });
-  const [enableTextShadow, setEnableTextShadow] = useState(false);
-  const [shadowOptions, setShadowOptions] = useState({
-    color: "#000000",
-    offsetX: 0,
-    offsetY: 0,
-    blur: 0,
-  });
-
-  const [strokeOptions, setStrokeOptions] = useState({
-    color: "#000000",
-    enabled: false,
-  });
 
   fabric.Object.prototype.set({
     cornerColor: "white",
@@ -78,26 +59,11 @@ export const FabricContextProvider = ({ children }) => {
 
   return (
     <FabricContext.Provider
-      //reomve anything that is not needed in multiple components
       value={{
         canvas,
         initCanvas,
         activeObject,
         setActiveObject,
-        backgroundColor,
-        setBackgroundColor,
-        startColor,
-        setStartColor,
-        endColor,
-        setEndColor,
-        directionRadio,
-        setDirectionRadio,
-        enableTextShadow,
-        setEnableTextShadow,
-        shadowOptions,
-        setShadowOptions,
-        strokeOptions, //remove from here and add to stroke component
-        setStrokeOptions,
       }}
     >
       {children}

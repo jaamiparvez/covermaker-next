@@ -2,9 +2,9 @@ import React, { useState, useEffect, useContext, createContext } from "react";
 import { FabricContext } from "./../context/FabricContext";
 import TextProperties from "./TextProperties";
 import BackgroundProperties from "./BackgroundProperties";
-export const BackgroundContext = createContext();
+import { BackgroundContextProvider } from "./../context/BackgroundContext";
+
 export default function Properties() {
-  const [backgroundColor, setBackgroundColor] = useState("#4682b4");
   const { activeObject } = useContext(FabricContext);
   const [isObjectSelected, setIsObjectSelected] = useState(false);
   useEffect(() => {
@@ -26,21 +26,15 @@ export default function Properties() {
   }
 
   return (
-    <div className="card properties">
-      <div className="card-header ">{getSelectedName()} Properties</div>
-      <div className="card-body row g-0">
-        <div className="row g-0">
-          {isObjectSelected ? (
-            <TextProperties />
-          ) : (
-            <BackgroundContext.Provider
-              value={{ backgroundColor, setBackgroundColor }}
-            >
-              <BackgroundProperties />
-            </BackgroundContext.Provider>
-          )}
+    <BackgroundContextProvider>
+      <div className="card properties">
+        <div className="card-header ">{getSelectedName()} Properties</div>
+        <div className="card-body row g-0">
+          <div className="row g-0">
+            {isObjectSelected ? <TextProperties /> : <BackgroundProperties />}
+          </div>
         </div>
       </div>
-    </div>
+    </BackgroundContextProvider>
   );
 }

@@ -1,10 +1,12 @@
 import { useState, useEffect, useContext } from "react";
 import { FabricContext } from "../context/FabricContext";
-import { BackgroundContext } from "./Properties";
+import { BackgroundContext } from "../context/BackgroundContext";
+
 const SolidBackground = () => {
   const { canvas } = useContext(FabricContext);
   const { backgroundColor, setBackgroundColor } = useContext(BackgroundContext);
-
+  // const [backgroundColor, setBackgroundColor] = useState("#4682b4");
+  console.log("backgroundColor in SolidBackground", backgroundColor);
   useEffect(() => {
     if (!canvas) return;
     canvas.setBackgroundColor(backgroundColor);

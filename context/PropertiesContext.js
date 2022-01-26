@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useContext, createContext } from "react";
 
-export const BackgroundContext = createContext([]);
+export const PropertiesContext = createContext([]);
 
-export function BackgroundContextProvider({ children }) {
+export function PropertiesContextProvider({ children }) {
   const [backgroundColor, setBackgroundColor] = useState("#4682b4");
   const [startColor, setStartColor] = useState("#1FF0FF");
   const [endColor, setEndColor] = useState("#4FC461");
@@ -11,7 +11,7 @@ export function BackgroundContextProvider({ children }) {
     top: false,
   });
   return (
-    <BackgroundContext.Provider
+    <PropertiesContext.Provider
       value={{
         backgroundColor,
         setBackgroundColor,
@@ -24,6 +24,6 @@ export function BackgroundContextProvider({ children }) {
       }}
     >
       {children}
-    </BackgroundContext.Provider>
+    </PropertiesContext.Provider>
   );
 }

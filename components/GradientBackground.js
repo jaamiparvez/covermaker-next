@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext, useRef } from "react";
 import { fabric } from "fabric";
 import { FabricContext } from "../context/FabricContext";
-import { BackgroundContext } from "../context/BackgroundContext";
+import { PropertiesContext } from "../context/PropertiesContext";
 
 const GraidentBackground = () => {
   const { canvas } = useContext(FabricContext);
@@ -12,7 +12,7 @@ const GraidentBackground = () => {
     setEndColor,
     directionRadio,
     setDirectionRadio,
-  } = useContext(BackgroundContext);
+  } = useContext(PropertiesContext);
 
   const startRef = useRef({});
   const endRef = useRef({});

@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext, createContext } from "react";
 import { FabricContext } from "./../context/FabricContext";
 import TextProperties from "./TextProperties";
 import BackgroundProperties from "./BackgroundProperties";
-import { BackgroundContextProvider } from "./../context/BackgroundContext";
+import { PropertiesContextProvider } from "../context/PropertiesContext";
 
 export default function Properties() {
   const { activeObject } = useContext(FabricContext);
@@ -26,7 +26,7 @@ export default function Properties() {
   }
 
   return (
-    <BackgroundContextProvider>
+    <PropertiesContextProvider>
       <div className="card properties">
         <div className="card-header ">{getSelectedName()} Properties</div>
         <div className="card-body row g-0">
@@ -35,6 +35,6 @@ export default function Properties() {
           </div>
         </div>
       </div>
-    </BackgroundContextProvider>
+    </PropertiesContextProvider>
   );
 }

@@ -10,6 +10,10 @@ export function PropertiesContextProvider({ children }) {
     left: true,
     top: false,
   });
+  const [strokeOptions, setStrokeOptions] = useState({
+    color: "#000000",
+    enabled: false,
+  });
   return (
     <PropertiesContext.Provider
       value={{
@@ -21,6 +25,8 @@ export function PropertiesContextProvider({ children }) {
         setEndColor,
         directionRadio,
         setDirectionRadio,
+        strokeOptions,
+        setStrokeOptions,
       }}
     >
       {children}

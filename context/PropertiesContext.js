@@ -14,6 +14,13 @@ export function PropertiesContextProvider({ children }) {
     color: "#000000",
     enabled: false,
   });
+  const [enableTextShadow, setEnableTextShadow] = useState(false);
+  const [shadowOptions, setShadowOptions] = useState({
+    color: "#000000",
+    offsetX: 0,
+    offsetY: 0,
+    blur: 0,
+  });
   return (
     <PropertiesContext.Provider
       value={{
@@ -27,6 +34,10 @@ export function PropertiesContextProvider({ children }) {
         setDirectionRadio,
         strokeOptions,
         setStrokeOptions,
+        enableTextShadow,
+        setEnableTextShadow,
+        shadowOptions,
+        setShadowOptions,
       }}
     >
       {children}

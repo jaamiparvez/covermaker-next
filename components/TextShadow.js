@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext, useRef } from "react";
 import { FabricContext } from "../context/FabricContext";
 import { PropertiesContext } from "../context/PropertiesContext";
 import { getActiveStyle, setActiveProp } from "../libs/utils";
-// import TextShadowColor from "./TextShadowColor";
+import TextShadowColor from "./TextShadowColor";
 
 const TextShadow = () => {
   const { canvas, activeObject } = useContext(FabricContext);
@@ -135,7 +135,7 @@ const TextShadow = () => {
                 value={shadowOptions.blur}
               />
             </div>
-            {/* <TextShadowColor /> */}
+            <TextShadowColor />
           </>
         )}
       </div>

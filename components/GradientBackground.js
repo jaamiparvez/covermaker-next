@@ -18,6 +18,7 @@ const GraidentBackground = () => {
   const endRef = useRef({});
 
   const [pos, setPos] = useState({});
+  const [enabled, setEnabled] = useState(false);
 
   const changeStartColor = (e) => {
     setStartColor(e.target.value);
@@ -86,6 +87,10 @@ const GraidentBackground = () => {
     canvas.renderAll();
   }, [startColor, endColor, canvas, pos]);
 
+  const handleSwitchClick = () => {
+    setEnabled(!enabled);
+    invertColors();
+  }
   return (
     <div
       className="row g-0"
@@ -94,6 +99,7 @@ const GraidentBackground = () => {
       <br />
       <div className="row g-0">Start</div>
       <input
+      className="focus:outline-none focus:ring"
         type="color"
         ref={startRef}
         value={startColor}
@@ -102,6 +108,7 @@ const GraidentBackground = () => {
       <br />
       <div className="row g-0">End</div>
       <input
+       className="focus:outline-none focus:ring"
         type="color"
         ref={endRef}
         value={endColor}
@@ -109,50 +116,52 @@ const GraidentBackground = () => {
       />
       <br />
 
-      <div className="row g-0 form-check form-switch">
-        <label
-          className="form-check-label switch-inline"
-          htmlFor="invertColors"
+      <div className="mt-6">
+        <button
+          onClick={handleSwitchClick}
+          aria-checked={enabled}
+          class={`${enabled ? "bg-blue-600" : "bg-gray-200"} relative inline-flex items-center border border-gray-400 w-9 h-4 rounded-full focus:outline-none focus:ring`}
+          role="switch"
+          type="button"
+          tabindex="0"
         >
-          Invert Colors
-        </label>
-        <input
-          className="form-check-input"
-          type="checkbox"
-          id="invertColors"
-          onChange={invertColors}
-        />
+          <span className="sr-only">Invert Colors</span>
+          <span
+            className={`transform transition ease-in-out duration-200 ${
+              enabled ? "translate-x-5 bg-white" : "translate-x-0.5 bg-gray-400/70 "
+            } inline-block w-3 h-3 transform  rounded-full`}
+          />
+        </button>
+        <label className="pl-2">Invert Colors</label>
       </div>
       <br />
       <div>Direction</div>
-      <div className="row g-0">
-        <div className="form-check">
-          <label className="form-check-label" htmlFor="leftRadio">
-            Left
-          </label>
+      <div className="">
+        <div className="">
           <input
-            className="form-check-input"
+            className="w-4 h-4 focus:outline-none focus:ring"
             type="radio"
-            name="flexRadioDefault"
             id="leftRadio"
             onChange={setPositionForLeft}
             autoComplete="off"
             checked={directionRadio.left}
-          />
+          /> 
+          <label className="pl-2" htmlFor="leftRadio">
+          Left
+        </label>
         </div>
-        <div className="form-check">
-          <label className="form-check-label" htmlFor="topRadio">
-            Top
-          </label>
+        <div className="">
           <input
-            className="form-check-input"
+            className="w-4 h-4 focus:outline-none focus:ring"
             type="radio"
-            name="flexRadioDefault"
             id="topRadio"
             onChange={setPositionForTop}
             autoComplete="off"
             checked={directionRadio.top}
           />
+          <label className="pl-2" htmlFor="topRadio">
+          Top
+        </label>
         </div>
       </div>
     </div>

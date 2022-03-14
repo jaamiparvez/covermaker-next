@@ -5,7 +5,6 @@ export default function Covermaker() {
   return (
     <FabricContextProvider>
       <div className="container">
-        <h1>Cover Maker</h1>
         <div className="flex">
           <div className="col">
             <FabricCanvas />

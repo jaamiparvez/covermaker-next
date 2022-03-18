@@ -29,18 +29,19 @@ const FontSize = () => {
 
   return (
     <div>
-      <div className="row g-0">
-        <div className="row g-0">Font Size</div>
-
-        <div className="input-group mb-3 w-50">
+       <div>
+    </div>
+      <div className="">
+        <div className="">Font Size</div>
+        <div className="relative flex w-28">
           <input
-            className="form-control"
+            className="w-full text-md border border-gray-300 rounded-l-md "
             type="text"
             value={options.fontSize}
             onChange={updateFontSize}
           ></input>
-          <div className="input-group-append">
-            <span className="input-group-text">px</span>
+          <div className="flex px-3 items-center bg-gray-200/80 border border-gray-300 border-l-0 rounded-r-md">
+            <span className="sm:text-sm">px</span>
           </div>
         </div>
       </div>

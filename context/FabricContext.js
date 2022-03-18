@@ -21,15 +21,18 @@ export const FabricContextProvider = ({ children }) => {
     mb: false,
   });
 
-  const initCanvas = useCallback((el) => {
+  const initCanvas = useCallback((canvasRef, width, height) => {
     const canvasOptions = {
       preserveObjectStacking: true,
       selection: true,
       defaultCursor: "default",
       backgroundColor: "#4682b4",
+      width: width,
+      height: height,
     };
 
-    let c = new fabric.Canvas(el, canvasOptions);
+    let c = new fabric.Canvas(canvasRef, canvasOptions);
+    // c.setDimensions({width:400, height:200});
 
     const title = new fabric.IText("Title", {
       fill: "#FFC800",

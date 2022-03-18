@@ -9,8 +9,9 @@ import { FabricContext } from "../context/FabricContext";
 export default function FabricCanvas({ width = 720, height = 1280 }) {
   const canvasRef = useRef(null);
   const { canvas, initCanvas, setActiveObject } = useContext(FabricContext);
+
   useEffect(() => {
-    initCanvas(canvasRef.current, width, height);
+    initCanvas(canvasRef.current,width,height);
   }, [canvasRef, width, height]);
   const updateActiveObject = useCallback(
     (e) => {
@@ -43,8 +44,6 @@ export default function FabricCanvas({ width = 720, height = 1280 }) {
       <canvas
         ref={canvasRef}
         id="canvas"
-        width={width}
-        height={height}
       ></canvas>
     </div>
   );

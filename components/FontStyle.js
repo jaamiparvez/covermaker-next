@@ -60,61 +60,68 @@ const FontStyle = () => {
   };
 
   return (
-    <div>
-      <div className="row g-0">
-        <div className="row g-0">Font Style</div>
 
+      <div>
+        <div className="mb-4">Font Style</div>
         <div
-          className="btn-group"
+          className="flex flex-row rounded-md mb-8"
           role="group"
-          aria-label="Basic checkbox toggle button group"
+          aria-label="Font style checkbox toggle button group"
         >
+        <div>
           <input
             type="checkbox"
-            className="btn-check"
+            className="sr-only peer"
             name="bold"
             id="bold"
             autoComplete="off"
             onChange={updateBold}
             checked={options.fontWeight === "bold" ? true : false}
           />
-          <label className="btn btn-outline-secondary fw-bolder" htmlFor="bold">
-            B
-          </label>
+          <label className="relative peer-checked:bg-gray-500 peer-checked:text-white bg-white text-gray-500 hover:bg-gray-500 hover:text-white 
+        border border-r-0 border-gray-500 rounded-l-md px-4 py-2 mx-0 peer-focus:z-10  peer-focus:ring  peer-focus:ring-gray-400 font-bold" htmlFor="bold">
+          B
+        </label>
+        </div>
+        <div>
           <input
             type="checkbox"
-            className="btn-check"
+            className="sr-only peer"
             name="underline"
             id="underline"
             autoComplete="off"
             onChange={updateUnderline}
             checked={options.textDecoration === "underline" ? true : false}
           />
-          <label
-            className="btn btn-outline-secondary text-decoration-underline"
-            htmlFor="underline"
-          >
-            U
-          </label>
+          <label className="relative peer-checked:bg-gray-500 peer-checked:text-white bg-white text-gray-500 hover:bg-gray-500 hover:text-white
+         border border-gray-500  px-4 py-2 mx-0 peer-focus:ring peer-focus:z-10 peer-focus:ring-gray-400 underline" htmlFor="underline">
+          U
+        </label>
+        </div>
+       
+       <div>
           <input
             type="checkbox"
-            className="btn-check"
+            className="sr-only peer"
             name="options-outlined"
             id="italics"
             autoComplete="off"
             onChange={updateItalic}
             checked={options.fontStyle === "italic" ? true : false}
           />
+          
           <label
-            className="btn btn-outline-secondary  fst-italic"
+           className="relative peer-checked:bg-gray-500 peer-checked:text-white bg-white text-gray-500 hover:bg-gray-500 hover:text-white
+            border border-l-0 border-gray-500 rounded-r-md px-4 py-2 mx-0 peer-focus:z-10 peer-focus:ring peer-focus:ring-gray-400 italic"
             htmlFor="italics"
-            style={{ fontFamily: "Serif" }}
+           
           >
             I
           </label>
+          </div>
         </div>
       </div>
-    </div>
+
   );
 };
 

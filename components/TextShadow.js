@@ -73,22 +73,22 @@ const TextShadow = () => {
 
   return (
     <div>
-      <div className="row g-0">
-        <div className="row form-check g-0">
+      <div className="">
+        <div className="">
           <input
-            className="form-check-input"
+            className=""
             type="checkbox"
             checked={enableTextShadow}
             onChange={handleEnableTextShadow}
             id="flexCheckChecked"
           />
-          <label className="form-check-label" htmlFor="flexCheckChecked">
+          <label className="ml-2" htmlFor="flexCheckChecked">
             Text Shadow
           </label>
         </div>
         {enableTextShadow && (
           <>
-            <div className="row g-0 my-3">
+            <div className="my-6">
               <label htmlFor="horizontal" className="form-label">
                 Horizontal Direction
               </label>
@@ -98,14 +98,14 @@ const TextShadow = () => {
                 step="1"
                 min="-100"
                 max="100"
-                className="form-range"
+                className="mt-4 w-full"
                 id="horizontal"
                 onChange={changeHorizontal}
                 value={shadowOptions.offsetX}
               />
             </div>
-            <div className="row g-0">
-              <label htmlFor="vertical" className="form-label">
+            <div className="my-6">
+              <label htmlFor="vertical" className="">
                 Vertical Direction
               </label>
               <input
@@ -114,14 +114,14 @@ const TextShadow = () => {
                 step="1"
                 min="-30"
                 max="30"
-                className="form-range"
+                className="mt-4 w-full"
                 id="vertical"
                 onChange={changeVertical}
                 value={shadowOptions.offsetY}
               />
             </div>
-            <div className="row g-0 my-3">
-              <label htmlFor="blur" className="form-label">
+            <div className="my-6">
+              <label htmlFor="blur" className="">
                 Blur
               </label>
               <input
@@ -129,7 +129,7 @@ const TextShadow = () => {
                 step="1"
                 min="0"
                 max="35"
-                className="form-range"
+                className="mt-4 w-full"
                 id="blur"
                 onChange={changeBlur}
                 value={shadowOptions.blur}

@@ -34,21 +34,22 @@ function TextStroke() {
     setActiveProp("stroke", e.target.value, activeObject, canvas);
   };
   return (
-    <div className="row g-0">
-      <div className="row form-check g-0">
+    <div className="">
+      <div className="">
         <input
-          className="form-check-input"
+          className=""
           type="checkbox"
           checked={strokeOptions.enabled}
           onChange={handleEnableTextStroke}
           id="flexCheckChecked"
         />
-        <label className="form-check-label" htmlFor="flexCheckChecked">
+        <label className="ml-2" htmlFor="flexCheckChecked">
           Text Stroke
         </label>
         {strokeOptions.enabled && (
           <div>
             <input
+            className="ml-6 mt-2"
               type="color"
               value={strokeOptions.color}
               onChange={updateStrokeColor}

@@ -28,8 +28,8 @@ const TextShadowColor = () => {
   };
 
   return (
-    <div className="row g-0">
-      <div className="row g-0">Color</div>
+    <div className="">
+      <div className="mb-2">Color</div>
       <div>
         <input
           type="color"

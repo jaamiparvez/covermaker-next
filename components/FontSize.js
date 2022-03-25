@@ -29,9 +29,7 @@ const FontSize = () => {
 
   return (
     <div>
-       <div>
-    </div>
-      <div className="">
+      <div>
         <div className="">Font Size</div>
         <div className="relative flex w-28">
           <input

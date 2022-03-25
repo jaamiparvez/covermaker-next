@@ -60,9 +60,11 @@ const ImageBackground = () => {
       <label className="form-label" htmlFor="img">
         Choose Background Image
       </label>
+    
       <input
         ref={inputRef}
-        className="form-control"
+        className="mt-2 w-full border rounded-md  focus:outline-offset-0 focus:outline-blue-400  file:bg-gray-200/80  file: file:p-2 file:border-0
+        hover:file:bg-gray-300"
         type="file"
         accept="image/*"
         id="img"
@@ -71,11 +73,12 @@ const ImageBackground = () => {
           setShowRemove(!showRemove);
         }}
       ></input>
+     
       {showRemove && (
         <button
           onClick={removeBackgroundImage}
           type="button"
-          className="btn btn-light"
+          className="focus:outline-none focus:ring-2 focus:ring-blue-300 w-full mt-2 bg-gray-100 rounded-md p-2 hover:bg-gray-200"
         >
           Remove
         </button>

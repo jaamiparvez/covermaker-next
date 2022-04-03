@@ -4,12 +4,12 @@ import { FabricContextProvider } from "../context/FabricContext";
 export default function Covermaker() {
   return (
     <FabricContextProvider>
-      <div className="container">
+      <div>
         <div className="flex">
-          <div className="col">
+          <div>
             <FabricCanvas />
           </div>
-          <div className="col">
+          <div>
             <Properties />
           </div>
         </div>

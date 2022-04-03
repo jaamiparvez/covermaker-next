@@ -45,6 +45,7 @@ const ImageBackground = () => {
           );
         }
       );
+      setShowRemove(true);
     }
     //canvas.requestRenderAll();
   }
@@ -70,7 +71,7 @@ const ImageBackground = () => {
         id="img"
         onChange={(e) => {
           changeBackgroundImage(e);
-          setShowRemove(!showRemove);
+         
         }}
       ></input>
      

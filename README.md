@@ -17,5 +17,5 @@ Cover Maker is an easy-to-use for making simple eBook covers. Cover Maker is a f
 
 ## Features
 
-- Cover Maker lets you alter the background colour of the cover to a solid, graident or an image.
+- Cover Maker lets you alter the background colour of the cover to a solid, gradient or an image.
 - Cover Maker also allows you to customise the text properties for the author's name and title by changing the text colour, font size, and text style, as well as the text stroke and text shadow.

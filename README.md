@@ -1,27 +1,21 @@
-# Next.js + Tailwind CSS Example
+# Cover Maker
+by [@jaamiparvez](https://jaamiparvez.com/)
 
-This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v3.0)](https://tailwindcss.com/blog/tailwindcss-v3) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
+Preview a live version here https://jaamiparvez.com/projects/covermaker
 
-## Preview
+## Overview 
 
-Preview the example live on [StackBlitz](http://stackblitz.com/):
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
+Cover Maker is an easy-to-use for making simple eBook covers. Cover Maker is a freelance client project (sharing code here with their permission). Initially, I built this project using React and Bootstrap as per clients requirements, but as I became more fimiliar with Next.js and Tailwind CSS, I thought it would would be a fun experience to migrate this application into Next.js and Tailwind CSS.
 
-## Deploy your own
+![Alt text](/public/screenshot2.png?raw=true "Screenshot of live project")
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
+## Built With
 
-## How to use
+[Next.js](https://nextjs.org/), [Tailwind CSS](https://tailwindcss.com/), [Fabric.js](http://fabricjs.com/)
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
+## Features
 
-```bash
-npx create-next-app --example with-tailwindcss with-tailwindcss-app
-# or
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
-```
-
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+- Cover Maker lets you alter the background colour of the cover to a solid, graident or an image.
+- Cover Maker also allows you to customise the text properties for the author's name and title by changing the text colour, font size, and text style, as well as the text stroke and text shadow.
